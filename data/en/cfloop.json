@@ -131,6 +131,20 @@
 			"description": "Date-Time range Loop (work around)",
 			"code": "from = now(); \r\n to   = dateAdd(\"d\", 7, from); \r\n for(date=from; dateCompare(date, to, \"d\") <= 0; date = dateAdd(\"d\", 1, date)){ \r\n writeOutput(dateTimeFormat(date, \"yyyy-mm-dd HH:nn:sstt\") & \"<br>\"); \r\n }",
 			"result": ""
+		},
+		{
+			"title": "Loop Over a Condition",
+			"description": "Condition Loop",
+			"code": "<cfset max = 10 />\n<cfset currentPosition = 1 />\n\n<cfloop condition=\"currentPosition lte max\">\n    <cfoutput>#currentPosition#</cfoutput>\n    <cfset currentPosition ++ />\n</cfloop>",
+			"result": "1 2 3 4 5 6 7 8 9 10",
+			"runnable": true
+		},
+		{
+			"title": "Loop Over a Condition (Script Syntax)",
+			"description": "Condition Loop",
+			"code": "max = 10;\ncurrentPosition = 1;\n\nwhile (urrentPosition lte max){\n    writeOutput(currentPosition);\n    currentPosition ++;\n}",
+			"result": "1 2 3 4 5 6 7 8 9 10",
+			"runnable": true
 		}
 	]
 }
